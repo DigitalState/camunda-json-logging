@@ -75,6 +75,10 @@ In order to enable pretty-print of JSON (should only be used for debug/developme
 The `PrettyPrintingJsonGeneratorDecorator` will then process the json into a pretty-print format within the console.
 
 
+## Timestamp Customization: Timezone
+
+See the logstash-logback-encoded [Timezone documentation](https://github.com/logstash/logstash-logback-encoder/tree/logstash-logback-encoder-5.2#customizing-timestamp) for details on how to customize the logback configuration for timezone conversions.
+
 # Customize JSON format and content
 
 The pattern uses the [Logstash-Logback-Encoder library v5.2](https://github.com/logstash/logstash-logback-encoder/tree/logstash-logback-encoder-5.2).  See the Readme of the library for further configuration options.
