@@ -83,8 +83,9 @@ The pattern uses the [Logstash-Logback-Encoder library v5.2](https://github.com/
 
 # Sample JSON Output
 
-```json
+```shell
 $ docker run --name camunda -p 8080:8080 digitalstate/camunda-bpm-platform:tomcat-7.9.0-jsonlogging
+
 Configure database
 OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
 OpenJDK 64-Bit Server VM warning: ignoring option PermSize=256m; support was removed in 8.0
@@ -213,8 +214,11 @@ OpenJDK 64-Bit Server VM warning: ignoring option PermSize=256m; support was rem
 {"@timestamp":"2018-08-07T16:58:15.607+00:00","@version":"1","message":"Deploying javax.ws.rs.core.Application: class org.camunda.bpm.tasklist.impl.web.TasklistApplication","logger_name":"org.jboss.resteasy.spi.ResteasyDeployment","thread_name":"http-nio-8080-exec-7","level":"INFO","level_value":20000,"HOSTNAME":"760651e5c675"}
 {"@timestamp":"2018-08-07T16:58:16.431+00:00","@version":"1","message":"Deploying javax.ws.rs.core.Application: class org.camunda.bpm.webapp.impl.engine.EngineRestApplication","logger_name":"org.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher","thread_name":"http-nio-8080-exec-10","level":"INFO","level_value":20000,"HOSTNAME":"760651e5c675"}
 {"@timestamp":"2018-08-07T16:58:16.480+00:00","@version":"1","message":"Deploying javax.ws.rs.core.Application: class org.camunda.bpm.admin.impl.web.AdminApplication","logger_name":"org.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher","thread_name":"http-nio-8080-exec-1","level":"INFO","level_value":20000,"HOSTNAME":"760651e5c675"}
+
+$ ^C
 load: 2.36  cmd: docker 35628 running 0.12u 0.19s
-^C{"@timestamp":"2018-08-07T17:01:08.749+00:00","@version":"1","message":"ENGINE-14015 Shutting down the JobExecutor[org.camunda.bpm.engine.impl.jobexecutor.RuntimeContainerJobExecutor]","logger_name":"org.camunda.bpm.engine.jobexecutor","thread_name":"Thread-7","level":"INFO","level_value":20000,"HOSTNAME":"760651e5c675"}
+
+{"@timestamp":"2018-08-07T17:01:08.749+00:00","@version":"1","message":"ENGINE-14015 Shutting down the JobExecutor[org.camunda.bpm.engine.impl.jobexecutor.RuntimeContainerJobExecutor]","logger_name":"org.camunda.bpm.engine.jobexecutor","thread_name":"Thread-7","level":"INFO","level_value":20000,"HOSTNAME":"760651e5c675"}
 {"@timestamp":"2018-08-07T17:01:08.750+00:00","@version":"1","message":"ENGINE-14020 JobExecutor[org.camunda.bpm.engine.impl.jobexecutor.RuntimeContainerJobExecutor] stopped job acquisition","logger_name":"org.camunda.bpm.engine.jobexecutor","thread_name":"Thread-5","level":"INFO","level_value":20000,"HOSTNAME":"760651e5c675"}
 {"@timestamp":"2018-08-07T17:01:08.906+00:00","@version":"1","message":"ENGINE-08051 Process application camunda-invoice undeployed","logger_name":"org.camunda.bpm.container","thread_name":"Thread-7","level":"INFO","level_value":20000,"HOSTNAME":"760651e5c675"}
 {"@timestamp":"2018-08-07T17:01:08.953+00:00","@version":"1","message":"ENGINE-00007 Process Engine default closed","logger_name":"org.camunda.bpm.engine","thread_name":"Thread-7","level":"INFO","level_value":20000,"HOSTNAME":"760651e5c675"}
