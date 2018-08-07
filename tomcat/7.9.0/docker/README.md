@@ -80,6 +80,10 @@ The `PrettyPrintingJsonGeneratorDecorator` will then process the json into a pre
 The pattern uses the [Logstash-Logback-Encoder library v5.2](https://github.com/logstash/logstash-logback-encoder/tree/logstash-logback-encoder-5.2).  See the Readme of the library for further configuration options.
 
 
+# Docker Logs
+
+Logs are being sent into the docker console.  It will still be up to your deployment to configure docker logging to be in a JSON format.
+
 
 # Sample JSON Output
 
