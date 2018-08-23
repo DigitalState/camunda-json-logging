@@ -1,4 +1,4 @@
-<configuration>
+<configuration debug="true" scan="true" scanPeriod="30 seconds" >
 
  <!-- For java.util.logging bridging; important for Camunda! -->
   <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
@@ -15,8 +15,11 @@
 
   <appender name="json" class="ch.qos.logback.core.ConsoleAppender">
     <encoder class="net.logstash.logback.encoder.LogstashEncoder">
-      <!-- Disable The below line for production mode: -->
-      <!-- @TODO convert to Groovy file to support conditional logic -->
+        <if condition='${PRETTY_JSON_LOG}'>
+          <then>
+            <jsonGeneratorDecorator class="net.logstash.logback.decorate.PrettyPrintingJsonGeneratorDecorator"/>
+          </then>
+        </if>
       <!-- <jsonGeneratorDecorator class="net.logstash.logback.decorate.PrettyPrintingJsonGeneratorDecorator"/> -->
     </encoder>
   </appender>

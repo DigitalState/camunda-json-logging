@@ -1,0 +1,13 @@
+.gradle
+build/
+target/
+bin/
+.settings
+.sts*
+
+.vscode/
+.classpath
+.project
+
+.idea/
+.mvn/wrapper/maven-wrapper.jar
