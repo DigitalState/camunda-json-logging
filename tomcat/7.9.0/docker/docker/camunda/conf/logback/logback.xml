@@ -1,4 +1,4 @@
-<configuration debug="true" scan="true" scanPeriod="30 seconds" >
+<configuration debug="false" scan="true" scanPeriod="30 seconds" >
 
  <!-- For java.util.logging bridging; important for Camunda! -->
   <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
