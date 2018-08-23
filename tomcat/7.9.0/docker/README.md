@@ -77,6 +77,9 @@ The docker-compose file can be used for quick testing locally.  Generally the do
 
 In order to provide a custom logback.xml file, it is suggested that you use Docker Volumes; where the volume points to `/camunda/conf/logback` folder.  Within this folder you will provide the `logback.xml` file with your configuration.  See the docker/docker/conf/logback.logback.xml file for a working example/the default logback.xml file that is used.
 
+A 30 second refresh has been configured on the logback.xml file.  If the file is changed through a volume, you can make updates to the logging configuration without having to restart the Camunda docker container.
+See the logback.xml file for further details.
+
 ## Pretty-Print JSON
 
 By default pretty-print of the JSON is disabled.  This is to ensure maximum compatibility for production use of the base image.
