@@ -48,11 +48,11 @@ Command Line:
 
 or use a dockerfile similar to the ./docker-compose.yml, but swap `build:` with `image: digitalstate/camunda-bpm-platform:tomcat-7.9.0-jsonlogging`
 
-### Pretty Print ENV Variable.
+### Pretty-Print ENV Variable.
 
 In the default logback.xml configuration, there has been a conditional statement added to support easy to use logging in Pretty-Print formatting.  This is typically used for development purposes:
 
-`PRETTY_JSON_LOG=true` will enable the pretty print.  By default, the env value is set to false.
+`PRETTY_JSON_LOG=true` will enable the pretty-print.  By default, the env value is set to false.
 
 Example:
 
