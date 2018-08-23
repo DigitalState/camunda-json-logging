@@ -27,6 +27,10 @@ This image is posted on Dockerhub under
 
 https://hub.docker.com/r/digitalstate/camunda-bpm-platform/
 
+## JSON Logging Dependencies
+
+A centralized package has been generated using maven in the `../json-logging-dependency-package` folder.  This package provides a single jar with all of the required jars needed for JSON logging using logback.
+
 ## Pull Image
 
 Command Line:
