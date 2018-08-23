@@ -84,7 +84,7 @@ In order to enable pretty-print of JSON (should only be used for debug/developme
 
 The `PrettyPrintingJsonGeneratorDecorator` will then process the json into a pretty-print format within the console.
 
-A Env variable has been added into the image (`PRETTY_JSON_LOG=false`) which can be set to true to enable Pretty-Print Json Logging.  This configuration is found through the logback.xml.  See the [Running Image](/#running-image) section of this document for further information.
+A Env variable has been added into the image (`PRETTY_JSON_LOG=false`) which can be set to true to enable Pretty-Print Json Logging.  This configuration is found through the logback.xml.  See the [Running Image](#running-image) section of this document for further information.
 
 ## Timestamp Customization: Timezone
 
