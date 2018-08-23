@@ -35,12 +35,12 @@ A centralized package has been generated using maven in the `../json-logging-dep
 
 Command Line:
 
-`docker pull digitalstate/camunda-bpm-platform:tomcat-7.9.0-jsonlogging` 
+`docker pull digitalstate/camunda-bpm-platform:tomcat-7.9.0-json-logging` 
 
 Within another dockerfile:
 
 ```dockerfile
-FROM digitalstate/camunda-bpm-platform:tomcat-7.9.0-jsonlogging
+FROM digitalstate/camunda-bpm-platform:tomcat-7.9.0-json-logging
 ...
 ```
 
@@ -48,9 +48,9 @@ FROM digitalstate/camunda-bpm-platform:tomcat-7.9.0-jsonlogging
 
 Command Line: 
 
-`docker run --name camunda -p 8080:8080 digitalstate/camunda-bpm-platform:tomcat-7.9.0-jsonlogging`
+`docker run --name camunda -p 8080:8080 digitalstate/camunda-bpm-platform:tomcat-7.9.0-json-logging`
 
-or use a dockerfile similar to the ./docker-compose.yml, but swap `build:` with `image: digitalstate/camunda-bpm-platform:tomcat-7.9.0-jsonlogging`
+or use a dockerfile similar to the ./docker-compose.yml, but swap `build:` with `image: digitalstate/camunda-bpm-platform:tomcat-7.9.0-json-logging`
 
 ### Pretty-Print ENV Variable.
 
@@ -60,12 +60,12 @@ In the default logback.xml configuration, there has been a conditional statement
 
 Example:
 
-`docker run --name camunda -p 8080:8080 -e PRETTY_JSON_LOG=true digitalstate/camunda-bpm-platform:tomcat-7.9.0-jsonlogging`
+`docker run --name camunda -p 8080:8080 -e PRETTY_JSON_LOG=true digitalstate/camunda-bpm-platform:tomcat-7.9.0-json-logging`
 
 
 # Building a new image
 
-`docker build -t digitalstate/camunda-bpm-platform:tomcat-7.9.0-jsonlogging .`
+`docker build -t digitalstate/camunda-bpm-platform:tomcat-7.9.0-json-logging .`
 
 
 # docker-compose file usage
@@ -110,7 +110,7 @@ Logs are being sent into the docker console.  It will still be up to your deploy
 # Sample JSON Output
 
 ```shell
-$ docker run --name camunda -p 8080:8080 digitalstate/camunda-bpm-platform:tomcat-7.9.0-jsonlogging
+$ docker run --name camunda -p 8080:8080 digitalstate/camunda-bpm-platform:tomcat-7.9.0-json-logging
 
 Configure database
 OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
