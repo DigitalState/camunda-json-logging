@@ -5,39 +5,56 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.digitalstate.camunda.logging</groupId>
-    <artifactId>camunda-json-logging-tomcat-7.9.0</artifactId>
+    <artifactId>camunda-json-logging-tomcat</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>JSON Logging Dependencies for Camunda Tomcat 7.9.0</name>
+    <name>JSON Logging Dependencies for Camunda Tomcat</name>
 
     <properties>
         <version.java>1.8</version.java>
+        <version.camunda>7.9.0</version.camunda>
+        <version.camunda.spin>1.5.1</version.camunda.spin>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.camunda.bpm</groupId>
+                <artifactId>camunda-parent</artifactId>
+                <version>${version.camunda}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.camunda.spin</groupId>
+                <artifactId>camunda-spin-root</artifactId>
+                <version>${version.camunda.spin}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jul-to-slf4j</artifactId>
-            <version>1.7.7</version>
         </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <version>2.9.6</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.9.6</version>
         </dependency>
 
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.1.2</version>
         </dependency>
 
         <dependency>
@@ -72,6 +89,7 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+                    <finalName>${project.artifactId}-${version.camunda}</finalName>
                 </configuration>
                 <executions>
                     <execution>
