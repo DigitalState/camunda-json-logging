@@ -13,9 +13,8 @@ COPY docker/camunda/conf/logback/logback.xml /camunda/conf/logback/logback.xml
 # Overwrite global logging configuration for tomcat
 COPY docker/camunda/conf/logging.properties /camunda/conf/logging.properties
 
-# Copy Jars for logging
-#COPY docker/camunda/lib/* /camunda/lib/
-COPY docker/camunda/lib/camunda-json-logging-tomcat-7.9.0-1.0.jar /camunda/lib/camunda-json-logging-tomcat-7.9.0-1.0.jar
+# Copy Jar for logging
+COPY docker/camunda/lib/ /camunda/lib/
 
 # Overwrite setenv.sh with additional CLASSPATH config that exposes the libraries at tomcat startup
 COPY docker/camunda/bin/setenv.sh /camunda/bin/setenv.sh
