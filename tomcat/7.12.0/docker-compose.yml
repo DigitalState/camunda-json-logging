@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  camunda:
+    environment:
+      - PRETTY_JSON_LOG=true
+    build: .
+    ports:
+      - "18180:8080"
