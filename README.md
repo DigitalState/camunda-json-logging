@@ -10,6 +10,6 @@ Patterns for enabling JSON Logging on the Tomcat distribution of Camunda BPM Pla
 
 ## Docker
 
-| Version | Description |
-| ------- | ----------- |
-| [7.9.0](./tomcat/7.9.0/docker) | Docker base image for pulling into other projects or use as a `docker run` command.  Modifies Tomcat logging for usage with Logback, SLFJ4, and JSON logging using logstash-logback-encoder.
+| Version                        | Description |
+|--------------------------------| ----------- |
+| [7.20.0](./tomcat/7.9.0/docker) | Docker base image for pulling into other projects or use as a `docker run` command.  Modifies Tomcat logging for usage with Logback, SLFJ4, and JSON logging using logstash-logback-encoder.
